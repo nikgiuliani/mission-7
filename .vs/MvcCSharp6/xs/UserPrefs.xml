@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{733E37E7-4FCA-4301-A67E-A8E5AE2A035B}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MvcCSharp6/Models/MovieModel.cs">
+    <Files>
+      <File FileName="MvcCSharp6/Models/MovieModel.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MvcCSharp6" expanded="True">
+            <Node name="MvcCSharp6" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="MovieModel.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MvcCSharp6 FirstBuild="True" PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
