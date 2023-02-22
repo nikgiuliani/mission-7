@@ -15,15 +15,65 @@ namespace MvcCSharp6.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.22");
 
+            modelBuilder.Entity("MvcCSharp6.Models.CategoryModel", b =>
+                {
+                    b.Property<int>("categoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("categoryName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("categoryId");
+
+                    b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            categoryId = 1,
+                            categoryName = "comedy"
+                        },
+                        new
+                        {
+                            categoryId = 2,
+                            categoryName = "drama"
+                        },
+                        new
+                        {
+                            categoryId = 3,
+                            categoryName = "action/adventure"
+                        },
+                        new
+                        {
+                            categoryId = 4,
+                            categoryName = "romance"
+                        },
+                        new
+                        {
+                            categoryId = 5,
+                            categoryName = "historical fiction"
+                        },
+                        new
+                        {
+                            categoryId = 6,
+                            categoryName = "history"
+                        },
+                        new
+                        {
+                            categoryId = 7,
+                            categoryName = "documentary"
+                        });
+                });
+
             modelBuilder.Entity("MvcCSharp6.Models.MovieModel", b =>
                 {
                     b.Property<int>("movieId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("category")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("categoryId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("director")
                         .IsRequired()
@@ -52,13 +102,15 @@ namespace MvcCSharp6.Migrations
 
                     b.HasKey("movieId");
 
-                    b.ToTable("responses");
+                    b.HasIndex("categoryId");
+
+                    b.ToTable("Responses");
 
                     b.HasData(
                         new
                         {
                             movieId = 1,
-                            category = "drama",
+                            categoryId = 1,
                             director = "John Lasseter",
                             edited = false,
                             notes = "super emotional",
@@ -69,7 +121,7 @@ namespace MvcCSharp6.Migrations
                         new
                         {
                             movieId = 2,
-                            category = "comedy",
+                            categoryId = 2,
                             director = "Tom McGrath",
                             edited = false,
                             notes = "greatest movie ever made",
@@ -80,7 +132,7 @@ namespace MvcCSharp6.Migrations
                         new
                         {
                             movieId = 3,
-                            category = "action",
+                            categoryId = 5,
                             director = "Steven Spielberg",
                             edited = false,
                             notes = "wow",
@@ -88,6 +140,15 @@ namespace MvcCSharp6.Migrations
                             title = "Saving Private Ryan",
                             year = (ushort)1998
                         });
+                });
+
+            modelBuilder.Entity("MvcCSharp6.Models.MovieModel", b =>
+                {
+                    b.HasOne("MvcCSharp6.Models.CategoryModel", "category")
+                        .WithMany()
+                        .HasForeignKey("categoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

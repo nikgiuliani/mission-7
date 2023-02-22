@@ -13,8 +13,6 @@ namespace MvcCSharp6.Models
         [Required]
         public int movieId { get; set; }
         [Required]
-        public string category { get; set; }
-        [Required]
         public string title { get; set; }
         [Required]
         public ushort year { get; set; }
@@ -26,5 +24,9 @@ namespace MvcCSharp6.Models
         public string lentTo { get; set; }
         [StringLength(25, ErrorMessage = "Notes must be a minimum of 25 characters!")]
         public string notes { get; set; }
+        // Foreign key relationship
+        [Required]
+        public int categoryId { get; set; }
+        public CategoryModel category { get; set; }
     }
 }

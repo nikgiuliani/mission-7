@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ngiuliani\\projects\\personal-apps\\mission-6\\MvcCSharp6\\MvcCSharp6.csproj": {}
+    "/Users/nikgiuliani/projects/is-core-projects/is-413/mission-7/mission-7/MvcCSharp6/MvcCSharp6.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ngiuliani\\projects\\personal-apps\\mission-6\\MvcCSharp6\\MvcCSharp6.csproj": {
+    "/Users/nikgiuliani/projects/is-core-projects/is-413/mission-7/mission-7/MvcCSharp6/MvcCSharp6.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ngiuliani\\projects\\personal-apps\\mission-6\\MvcCSharp6\\MvcCSharp6.csproj",
+        "projectUniqueName": "/Users/nikgiuliani/projects/is-core-projects/is-413/mission-7/mission-7/MvcCSharp6/MvcCSharp6.csproj",
         "projectName": "MvcCSharp6",
-        "projectPath": "C:\\Users\\ngiuliani\\projects\\personal-apps\\mission-6\\MvcCSharp6\\MvcCSharp6.csproj",
-        "packagesPath": "C:\\Users\\ngiuliani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ngiuliani\\projects\\personal-apps\\mission-6\\MvcCSharp6\\obj\\",
+        "projectPath": "/Users/nikgiuliani/projects/is-core-projects/is-413/mission-7/mission-7/MvcCSharp6/MvcCSharp6.csproj",
+        "packagesPath": "/Users/nikgiuliani/.nuget/packages/",
+        "outputPath": "/Users/nikgiuliani/projects/is-core-projects/is-413/mission-7/mission-7/MvcCSharp6/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ngiuliani\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/nikgiuliani/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -77,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.426\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/3.1.426/RuntimeIdentifierGraph.json"
         }
       }
     }

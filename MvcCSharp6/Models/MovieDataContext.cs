@@ -17,15 +17,26 @@ namespace MvcCSharp6.Models
 
         }
 
-        public DbSet<MovieModel> responses { get; set; }
+        public DbSet<MovieModel> Responses { get; set; }
+        public DbSet<CategoryModel> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder mb)
         {
+            mb.Entity<CategoryModel>().HasData(
+                new CategoryModel { categoryId = 1, categoryName = "comedy" },
+                new CategoryModel { categoryId = 2, categoryName = "drama" },
+                new CategoryModel { categoryId = 3, categoryName = "action/adventure" },
+                new CategoryModel { categoryId = 4, categoryName = "romance" },
+                new CategoryModel { categoryId = 5, categoryName = "historical fiction" },
+                new CategoryModel { categoryId = 6, categoryName = "history" },
+                new CategoryModel { categoryId = 7, categoryName = "documentary" }
+            );
+
             mb.Entity<MovieModel>().HasData(
                 new MovieModel
                 {
                     movieId = 1,
-                    category = "drama",
+                    categoryId = 1,
                     title = "Cars 2",
                     year = 2011,
                     director = "John Lasseter",
@@ -35,7 +46,7 @@ namespace MvcCSharp6.Models
                 new MovieModel
                 {
                     movieId = 2,
-                    category = "comedy",
+                    categoryId = 2,
                     title = "Megamind",
                     year = 2010,
                     director = "Tom McGrath",
@@ -45,7 +56,7 @@ namespace MvcCSharp6.Models
                 new MovieModel
                 {
                     movieId = 3,
-                    category = "action",
+                    categoryId = 5,
                     title = "Saving Private Ryan",
                     year = 1998,
                     director = "Steven Spielberg",

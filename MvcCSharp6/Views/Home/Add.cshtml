@@ -9,8 +9,14 @@
     <form method="post">
         <div>
             <div style="display: grid; grid-template-columns: 100px 130px;">
-                <label asp-for="category"> Category: </label>
-                <input type="text" asp-for="category" required>
+                <label asp-for="categoryId"> Category: </label>
+                <select id="rating" asp-for="categoryId" required>
+                    <option value=""> Select a category </option>
+                    @foreach (CategoryModel c in ViewBag.Categories)
+                    {
+                        <option value="@c.categoryId"> @c.categoryName </option>
+                    }
+                </select>
             </div>
             <div style="display: grid; grid-template-columns: 100px 130px;">
                 <label asp-for="title"> Title: </label>
